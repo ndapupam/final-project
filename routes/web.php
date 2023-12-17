@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NadaController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,14 +34,8 @@ Route::get('/database-baju/cari',[NadaController::class,'cari']);
 
 Route::get('/database-baju/view/{id}',[NadaController::class,'view']);
 
-Route::get('/home',[NadaController::class,'home']);
+Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\LandingController::class, 'index'])->name('home');
+Route::get('/home',[NadaController::class,'home'])->name('home');
 
-// Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

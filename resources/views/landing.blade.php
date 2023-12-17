@@ -100,7 +100,6 @@
         <div class="col-md-2 col-sm-4 brand-block ">
           <div class="main-logo text-lg-center">
             <a href="index.html" style="font-size: 24px; font-weight:bold">
-              {{-- <img src=" {{ asset('/images/main-logo.png')}}" alt="logo" class="brand-image"> --}}
               Nada
             </a>
           </div>
@@ -109,40 +108,40 @@
           <nav class="navbar justify-content-end">
             <div class="user-items">
               <ul class="list-unstyled content-light d-flex align-items-center m-0">
-                <li>
-                  <i class="icon icon-user"></i>
-                  <a href="/login" class="text-uppercase item-anchor">Login</a>
-                </li>
-                <li>
-                  <i class="icon icon-user"></i>
-                  <a href="/register" class="text-uppercase item-anchor">Register</a>
-                </li>
-                <li>
-                    <i class="icon icon-user"></i>
-                    <a href="/database-baju" class="text-uppercase item-anchor">Database</a>
-                  </li>
-                {{-- <li class="search-item">
-                  <div class="search-bar">
-                    <form action="/action_page.php" class="search-form d-flex no-margin">
-                      <i class="icon icon-search"></i>
-                      <input type="text" placeholder="SEARCH.." name="search"
-                        class="title-placeholder no-margin text-light ">
-                    </form>
-                  </div>
-                </li> --}}
-                {{-- <li>
-                  <a href="#" class="like">
-                    <i class="icon icon-like"></i>
-                    <span>(0)</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="cart for-buy">
-                    <i class="icon icon-shopping-cart"></i>
-                    <span>(0)</span>
-                  </a>
-                </li> --}}
-              </ul>
+                <!-- Authentication Links -->
+                @guest
+                    @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                    @endif
+
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </li>
+                    @endif
+                @else
+                <li class="nav-item dropdown"><a href="/database-baju">Database Baju</a></li>
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
+            </ul>
             </div>
           </nav>
         </div>

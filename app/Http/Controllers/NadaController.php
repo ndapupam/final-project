@@ -10,7 +10,7 @@ class NadaController extends Controller
     public function home()
     {
 
-    	return view('home');
+    	return view('landing');
 
     }
     public function index()
