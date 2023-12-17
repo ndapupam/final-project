@@ -35,4 +35,12 @@ Route::get('/database-baju/view/{id}',[NadaController::class,'view']);
 
 Route::get('/home',[NadaController::class,'home']);
 
+// Route::get('/home', [App\Http\Controllers\LandingController::class, 'index'])->name('home');
 
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

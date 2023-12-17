@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
+	<title>Tambah Data Baju</title>
 </head>
 <body>
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
 	<h3>Data Baju</h3>
 
 	<a href="/database-baju"> Kembali</a>
