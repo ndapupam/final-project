@@ -32,3 +32,7 @@ Route::get('/database-baju/hapus/{id}',[NadaController::class,'hapus']);
 Route::get('/database-baju/cari',[NadaController::class,'cari']);
 
 Route::get('/database-baju/view/{id}',[NadaController::class,'view']);
+
+Route::get('/home',[NadaController::class,'home']);
+
+
