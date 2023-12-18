@@ -870,9 +870,9 @@
             <div class="col-lg-3 col-sm-6">
               <div class="footer-menu contact-item menu-004">
                 <h5 class="widget-title">Contact Us</h5>
-                <p>Do you have any queries or suggestions? <a href="mailto:">yourinfo@gmail.com</a>
+                <p>Do you have any queries or suggestions? <a href="mailto:">nadaputripambudi95@gmail.com</a>
                 </p>
-                <p>If you need support? Just give us a call. <a href="">+55 111 222 333 44</a>
+                <p>If you need support? Just give us a call. <a href="">+62 822 2889 8009</a>
                 </p>
               </div>
             </div>
