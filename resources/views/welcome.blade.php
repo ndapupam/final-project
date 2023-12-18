@@ -190,7 +190,7 @@
     </div>
     <div class="banner-content content-light style1 text-center col-md-6">
       <h2 class="banner-title">
-        Make your fashion look swanky.
+        Make your fashion look cool.
       </h2>
       <div class="btn-center">
         <a href="#" class="btn btn-medium btn-light">Shop Now</a>

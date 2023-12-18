@@ -36,6 +36,6 @@ Route::get('/database-baju/view/{id}',[NadaController::class,'view']);
 
 Auth::routes();
 
-Route::get('/home',[NadaController::class,'home'])->name('home');
+// Route::get('/home',[NadaController::class,'home'])->name('home');
 
 

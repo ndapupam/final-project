@@ -31,7 +31,7 @@
                         Menu
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/home">Home</a>
+                        <a class="dropdown-item" href="/">Home</a>
                         <a class="dropdown-item" href="/database-baju">Database Baju</a>
                     </div>
                 </li>
