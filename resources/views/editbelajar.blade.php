@@ -1,28 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('master2')
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>Edit Pegawai</h3>
+@section('konten')
+	<h3>Edit Data Baju</h3>
 
-	<a href="/database-baju"> Kembali</a>
+	<a href="/database-baju" class="btn btn-primary"> Kembali</a>
 
 	<br/>
 	<br/>
-	<form action="/database-baju/update" method="post">
+
+
+	<form action="/database-baju/update" method="post" class="border col-6">
 		{{ csrf_field() }}
-		Kode Baju (Read Only): <input type="number" name="kodebaju" value="{{ $baju->kodebaju }}" readonly> <br/>
+        <div class="form-group">
+            <label for="kodebaju" class="col control-label pt-4">Kode Baju</label>
+            <div class="col">
+                <input name="kodebaju"  type="number" id="kodebaju" class="form-control" value="{{ $baju->kodebaju }}" readonly>
+            </div>
+        </div>
 
-		Merk Baju: <input type="text" required="required" name="merkbaju" value="{{ $baju->merkbaju }}"> <br/>
+        <div class="form-group">
+            <label for="merkbaju" class="col control-label">Merk Baju</label>
+            <div class="col">
+                <input name="merkbaju" required="required" type="text" id="merkbaju" class="form-control" value="{{ $baju->merkbaju }}">
+            </div>
+        </div>
 
-		Stok Baju: <input type="number" required="required" name="stokbaju" value="{{ $baju->stokbaju }}"> <br/>
+        <div class="form-group">
+            <label for="stokbaju" class="col control-label">Stock Baju</label>
+            <div class="col">
+                <input type="number" required="required" name="stokbaju" id="stokbaju" class="form-control" value="{{ $baju->stokbuju }}">
+            </div>
+        </div>
 
-		<input type="submit" value="Simpan Data">
+        <div class="form-group">
+            <div class="col pb-3">
+                <input type="submit" value="Simpan Data" class="btn btn-success w-100">
+            </div>
+        </div>
+
 	</form>
-
-
-</body>
-</html>
+@endsection

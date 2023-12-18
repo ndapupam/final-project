@@ -1,28 +1,49 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('master2')
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>Edit Pegawai</h3>
+@section('konten')
+	<h3>Detail Baju</h3>
 
-	<a href="/database-baju"> Kembali</a>
+	<a href="/database-baju" class="btn btn-primary"> Kembali</a>
 
 	<br/>
 	<br/>
-	<form action="/database-baju/view" method="get">
-		{{ csrf_field() }}
-		Kode Baju: <input type="number" name="kodebaju" value="{{ $baju->kodebaju }}" readonly> <br/>
 
-		Merk Baju: <input type="text" required="required" name="merkbaju" value="{{ $baju->merkbaju }}" readonly> <br/>
-
-		Stock Baju: <input type="number" required="required" name="stockbaju" value="{{ $baju->stockbaju }}"readonly> <br/>
-
-        <a href="/database-baju" class='form-control btn btn-primary'>Ok</a>
-	</form>
+    <div class='row'>
 
 
-</body>
-</html>
+	    <form method="get" class='col-6 border' action="/database-baju/view">
+            {{ csrf_field() }}
+
+            <div class="form-group">
+                <label for="kodebaju" class="col control-label pt-4">Kode Baju</label>
+                <div class="col">
+                    <input type="number" class="form-control w-100" name="kodebaju" value="{{ $baju->kodebaju }}" readonly>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="merkbaju" class="col control-label">Merk baju</label>
+                <div class="col">
+                    <input type="text" class="form-control w-100" name="merkbaju" value="{{ $baju->merkbaju }}" readonly>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="stokbaju" class="col control-label">Stok Baju</label>
+                <div class="col">
+                    <input type="text" class="form-control w-100" name="stokbaju" value="{{ $baju->stokbaju }}" readonly>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <div class="col pb-3">
+                    <a href="/database-baju" class='form-control btn btn-primary '>Ok</a>
+                </div>
+            </div>
+	    </form>
+
+    </div>
+@endsection

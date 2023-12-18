@@ -12,9 +12,9 @@
     @endsection
     @section('konten')
     <p>Cari Data Baju :</p>
-	<form action="/database-baju/cari" method="GET">
-		<input class="form-control" type="text" name="cari" placeholder="Cari baju berdasarkan nama ..." value="{{ old('cari') }}">
-		<input type="submit" value="Cari" class="btn btn-primary">
+	<form action="/database-baju/cari" method="GET" class="d-flex">
+		<input class="form-control col-8" type="text" name="cari" placeholder="Cari baju berdasarkan nama ..." value="{{ old('cari') }}">
+		<input type="submit" value="Cari" class="btn btn-primary col-2 ">
 	</form>
 	<table class="table table-striped table-hover">
 
