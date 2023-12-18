@@ -7,16 +7,11 @@ use App\Models\Baju;
 
 class NadaController extends Controller
 {
-    public function home()
-    {
 
-    	return view('landing');
-
-    }
     public function index()
     {
     	// mengambil data dari table pegawai
-    	$baju = Baju::paginate(10);
+    	$baju = Baju::paginate(5);
 
     	// mengirim data pegawai ke view index
     	return view('belajar',['baju' => $baju]);

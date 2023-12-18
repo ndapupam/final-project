@@ -20,7 +20,7 @@
         <div class="form-group">
             <label for="merkbaju" class="col-sm-2 control-label">Merk Baju</label>
             <div class="col-6">
-                <input name="merkbaju" type="text" class="form-control" id="merkbaju" placeholder="Masukkan nilai angka ..." required="required">
+                <input name="merkbaju" type="text" class="form-control" id="merkbaju" placeholder="Masukkan merk baju ..." required="required">
             </div>
         </div>
 

@@ -28,7 +28,7 @@
         <div class="form-group">
             <label for="stokbaju" class="col control-label">Stock Baju</label>
             <div class="col">
-                <input type="number" required="required" name="stokbaju" id="stokbaju" class="form-control" value="{{ $baju->stokbuju }}">
+                <input type="number" required="required" name="stokbaju" id="stokbaju" class="form-control" value="{{ $baju->stokbaju }}">
             </div>
         </div>
 
