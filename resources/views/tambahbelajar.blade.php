@@ -10,12 +10,7 @@
 
 	<form action="/database-baju/store" method="post" class="form-horizontal">
 		{{ csrf_field() }}
-        {{-- <div class="form-group">
-            <label class="col-sm-2 control-label">Kode Buku</label>
-            <div class="col-6">
-                <input name="kodebuku" type="number" class="form-control" placeholder="Masukkan Kode Buku ..." required="required">
-            </div>
-        </div> --}}
+
 
         <div class="form-group">
             <label for="merkbaju" class="col-sm-2 control-label">Merk Baju</label>
