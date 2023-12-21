@@ -84,5 +84,11 @@ public function cari(Request $request)
 	    // passing data pegawai yang didapat ke view edit.blade.php
 	    return view('viewbelajar',['baju' => $baju]);
 }
+public function outOfStockReport()
+{
+    $outOfStockBaju = Baju::where('tersedia', 0)->get();
+
+    return view('out_of_stock_report', ['outOfStockBaju' => $outOfStockBaju]);
+}
 }
 

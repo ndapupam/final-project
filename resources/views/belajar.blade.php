@@ -6,6 +6,7 @@
 	<h3>Data Baju</h3>
 
 	<a href="/database-baju/tambah"> + Tambah Data Baju Baru</a>
+    <a href="{{ route('out-of-stock-report') }}">Out of Stock Report</a>
 
 	<br/>
 	<br/>
