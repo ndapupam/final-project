@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NadaController;
 use Illuminate\Support\Facades\Auth;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,5 +36,7 @@ Route::get('/database-baju/cari',[NadaController::class,'cari']);
 Route::get('/database-baju/view/{id}',[NadaController::class,'view']);
 
 Auth::routes();
+
+Route::get('/out-of-stock-report', [NadaController::class, 'outOfStockReport'])->name('out-of-stock-report');
 
 
